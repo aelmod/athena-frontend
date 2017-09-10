@@ -1,4 +1,4 @@
 {{question}}
 <li *ngFor="let answer of answers" style="background: chocolate">
-  <span [ngClass]="{'t1': answer.isCorrect}">{{answer.content}}</span>
+  <span [class.t1]="answer.isCorrect === true">{{answer.content}}</span>
 </li>
