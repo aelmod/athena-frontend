@@ -1,12 +1,5 @@
 <ul *ngFor="let question of questions">
-  <li>{{question.question}}</li>
   <li>{{question.author.name}}</li>
   <li>{{question.created_at}}</li>
-  <li *ngFor="let answer of question.answers" style="background: chocolate">
-    <span [ngClass]="{'t1': answer.isCorrect}">{{answer.content}}</span>
-  </li>
+  <app-question question="{{question.question}}" [answers]="question.answers"></app-question>
 </ul>
-
-
-<!--<app-additional-info></app-additional-info>-->
-<!--<app-question answers="question.answers"></app-question>-->
