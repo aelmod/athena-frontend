@@ -1,5 +1,5 @@
 <ul *ngFor="let question of questions">
   <li>{{question.author.name}}</li>
-  <li>{{question.created_at}}</li>
+  <li>{{question.created_at | date:'d MMM y HH:MM'}}</li>
   <app-question question="{{question.question}}" [answers]="question.answers"></app-question>
 </ul>
