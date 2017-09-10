@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {QuestionService} from './questions/question.service';
 
 @Component({
   selector: 'app-athena',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  constructor(private questionService: QuestionService) {
+    questionService.getAllQuestions()
+      .then((questions) => {
+        console.log(questions);
+      });
+  }
 }
