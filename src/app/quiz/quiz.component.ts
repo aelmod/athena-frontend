@@ -14,7 +14,7 @@ export class QuizComponent implements OnInit {
   private questions: Question[] = [];
 
   ngOnInit() {
-    this.questionService.getAllQuestions()
+    this.questionService.getAll()
       .then((page) => {
         this.questions = page.list;
       });

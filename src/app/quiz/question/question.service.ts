@@ -9,7 +9,7 @@ export class QuestionService {
   constructor(private http: Http) {
   }
 
-  getAllQuestions(): Promise<Page<Question>> {
+  getAll(): Promise<Page<Question>> {
     return this.http.get('api/questions')
       .toPromise()
       .then((res) => {
@@ -17,7 +17,7 @@ export class QuestionService {
       });
   }
 
-  get(id: number) {
+  getById(id: number) {
     return this.http.get(`api/questions/${id}`)
       .toPromise()
       .then((res) => {
