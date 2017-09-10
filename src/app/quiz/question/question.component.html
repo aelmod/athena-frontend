@@ -1,3 +1,4 @@
-<p>
-  question works!
-</p>
+{{question}}
+<li *ngFor="let answer of answers" style="background: chocolate">
+  <span [ngClass]="{'t1': answer.isCorrect}">{{answer.content}}</span>
+</li>
