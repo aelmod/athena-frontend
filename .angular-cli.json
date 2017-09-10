@@ -19,7 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/tacit-css/dist/tacit-css-1.1.0.min.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
