@@ -2,9 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { QuestionComponent } from './question/question.component';
-import { AnswerComponent } from './answer/answer.component';
 import { RouterModule, Routes } from '@angular/router';
+import { QuizComponent } from './quiz/quiz.component';
+import { QuestionComponent } from './quiz/question/question.component';
+import { AnswerComponent } from './quiz/answer/answer.component';
 
 const appRoutes: Routes = [
   // { path: 'test1', component:  },
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     QuestionComponent,
-    AnswerComponent
+    AnswerComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule,
